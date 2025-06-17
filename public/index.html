@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combina AI - Nome da Barbearia</title>
+    <meta name="description" content="Agende seu horário na Barbearia XYZ de forma rápida e fácil.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-link"><img src="assets/img/ChatGPT Image 17 de jun. de 2025, 18_47_44.png" alt="Logo da Barbearia" class="logo"></a>
+            <nav>
+                <a href="#servicos">Serviços</a>
+                <a href="#agendar">Agendar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app">
+        <section class="hero">
+            <div class="container">
+                <h2>Elegância e precisão em cada corte.</h2>
+                <p>Agende seu horário com os melhores profissionais da cidade.</p>
+                <a href="#agendar" class="cta-button">Agendar Agora</a>
+            </div>
+        </section>
+
+        <section id="agendar" class="scheduler">
+            <div class="container">
+                <h3>Faça seu Agendamento</h3>
+                <div class="scheduler-steps">
+                    <div id="step-1" class="step">
+                        <h4>1. Escolha o serviço</h4>
+                        <div id="services-list" class="services-container">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+
+                    <div id="step-2" class="step hidden">
+                        <h4>2. Escolha a data e o horário</h4>
+                        <label for="date-picker" class="visually-hidden">Escolha a data</label>
+                        <input type="date" id="date-picker" title="Escolha a data do agendamento" placeholder="Selecione a data">
+                        <div id="time-slots" class="time-slots-container">
+                            </div>
+                    </div>
+
+                    <div id="step-3" class="step hidden">
+                        <h4>3. Seus dados</h4>
+                        <form id="booking-form">
+                            <input type="text" id="client-name" placeholder="Seu nome completo" required>
+                            <input type="tel" id="client-phone" placeholder="Seu WhatsApp (XX) XXXXX-XXXX" required>
+                            <button type="submit" class="cta-button">Confirmar Agendamento</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <div id="confirmation-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="success-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                <h3>Agendamento Confirmado!</h3>
+                <p id="confirmation-details"></p>
+                <small>Enviamos uma confirmação para o seu WhatsApp.</small>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <span class="client-name">[Nome da Barbearia]</span>. Todos os direitos reservados.</p>
+            <p>Desenvolvido com ❤️ por <span class="dev-name">[emedev.com.br]</span></p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
